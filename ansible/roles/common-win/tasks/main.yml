@@ -1,0 +1,34 @@
+---
+- name: Set PowerShell ExecutionPolicy
+  ansible.windows.win_shell: Set-ExecutionPolicy unrestricted -Force
+  when: ansible_facts.env.PSExecutionPolicyPreference != 'Unrestricted'
+
+- name: Download and install Chocolatey
+  chocolatey.chocolatey.win_chocolatey:
+    name: chocolatey
+    state: present
+    source: http://10.4.1.220:8080/endpoints/Scripts/content/install-chocolatey.ps1
+
+- name: Remove the default public source
+  win_chocolatey_source:
+    name: chocolatey
+    state: absent
+
+- name: Add new internal source
+  win_chocolatey_source:
+    name: internal-repo
+    state: present
+    source: http://10.4.1.220:8080/nuget/Public-Chocolatey
+
+- name: Install Default Apps
+  win_chocolatey:
+    name: '{{ item }}'
+    state: present
+  with_items:
+    - GoogleChrome
+    - Firefox
+    - Office365Business
+    - adobereader
+    - 7zip
+    - notepadplusplus
+    - jre8

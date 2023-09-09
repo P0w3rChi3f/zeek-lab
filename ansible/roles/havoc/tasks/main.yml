@@ -1,0 +1,56 @@
+---
+
+- name: Install Havoc Prereq's
+  ansible.builtin.apt:
+    name: "{{ item }}"
+    state: present
+  with_items: 
+    - git 
+    - build-essential 
+    - apt-utils 
+    - cmake 
+    - libfontconfig1 
+    - libglu1-mesa-dev 
+    - libgtest-dev 
+    - libspdlog-dev 
+    - libboost-all-dev 
+    - libncurses5-dev 
+    - libgdbm-dev 
+    - libssl-dev 
+    - libreadline-dev 
+    - libffi-dev 
+    - libsqlite3-dev 
+    - libbz2-dev 
+    - mesa-common-dev 
+    - qtbase5-dev 
+    - qtchooser 
+    - qt5-qmake 
+    - qtbase5-dev-tools 
+    - libqt5websockets5 
+    - libqt5websockets5-dev 
+    - qtdeclarative5-dev 
+    - golang-go 
+    - qtbase5-dev 
+    - libqt5websockets5-dev 
+    - python3-dev 
+    - mingw-w64 
+    - nasm
+
+- name: Create C2 Directories
+  ansible.builtin.file: 
+    path: /C2/havoc
+
+- name: Clone Havoc C2
+  ansible.builtin.git:
+    repo: https://github.com/HavocFramework/Havoc.git
+    dest: /C2/havoc
+    force: true
+
+- name: Stage the TeamServer
+  ansible.builtin.shell: cd /C2/havoc/teamserver; go mod download golang.org/x/sys; go mod download github.com/ugorji/go
+  
+#- name: Build the TeamServer
+#  ansible.builtin.shell: cd /C2/havoc; make ts-build
+#  become: true
+#  
+#  ./havoc server --profile ./profiles/havoc.yaotl -v --debug

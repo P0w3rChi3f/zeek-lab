@@ -1,0 +1,18 @@
+---
+- name: Install Python
+  yum: 
+    name: "{{ item }}" 
+    state: installed
+  with_items:
+    - python3
+    - python-setuptools
+    - python3-pip
+    - python3-PyMySQL
+    
+- name: Install Python Packages
+  pip: 
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - PyMySQL
+    #- mysqlclient

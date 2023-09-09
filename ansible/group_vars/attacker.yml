@@ -1,0 +1,5 @@
+---
+ansible_user: kadmin
+ansible_password: PassWord12#$34
+ansible_connection: ssh
+ansible_become_password: PassWord12#$34

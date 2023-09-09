@@ -1,0 +1,57 @@
+---
+# tasks file for forest-dc
+
+- name: Set Administrator PassWord
+  ansible.windows.win_user:
+    name: '{{ domain_admin }}'
+    password: '{{ admin_pass }}'
+    state: present
+
+- name: Change the DCs Hostnames
+  ansible.windows.win_hostname:
+    name: "{{ host_name }}"
+  register: res
+
+- name: Reboot
+  ansible.windows.win_reboot:
+  when: res.reboot_required
+
+- name: Create new Windows domain in a new forest with specific parameters
+  ansible.windows.win_domain:
+    create_dns_delegation: false
+    database_path: C:\Windows\NTDS
+    dns_domain_name: '{{ domain_name }}'
+    domain_mode: '{{ mode }}'
+    domain_netbios_name: '{{ netbios }}'
+    forest_mode: '{{ mode }}'
+    safe_mode_password: '{{ admin_pass }}'
+    sysvol_path: C:\Windows\SYSVOL
+    when: domain_state.member_server
+  register: domain_install
+
+- name: Reboot after promotion
+  ansible.windows.win_reboot:
+  when: domain_install.reboot_required
+
+- name: Create Root OU
+  community.windows.win_domain_ou:
+    name: "{{ root_ou }}"
+    state: present
+
+- name: Create Users OU
+  community.windows.win_domain_ou:
+    name: "{{ root_users_name }}"
+    path: "{{ root_users_path }}"
+    state: present
+
+- name: Create Groups OU
+  community.windows.win_domain_ou:
+    name: "{{ root_groups_name }}"
+    path: "{{ root_groups_path }}"
+    state: present
+
+- name: Create Computers OU
+  community.windows.win_domain_ou:
+    name: "{{ root_computers_name }}"
+    path: "{{ root_computers_path }}"
+    state: present

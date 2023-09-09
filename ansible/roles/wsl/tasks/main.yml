@@ -1,0 +1,52 @@
+---
+
+- name: Temparily Disable UAC
+  ansible.windows.win_regedit:
+    path: HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System
+    name: EnableLUA
+    data: 0
+  register: enablelua_key
+
+- name: Restart
+  ansible.windows.win_reboot:
+  when: enablelua_key.data_changed == true
+
+- name: Enable WSL 
+  ansible.windows.win_optional_feature:
+    name: 
+      - Microsoft-Windows-Subsystem-Linux
+      - VirtualMachinePlatform
+    state: present
+  register: win_feat
+
+- name: Restart
+  ansible.windows.win_reboot:
+  when: win_feat.reboot_required == true
+
+- name: Get info for WSL
+  ansible.windows.win_service_info:
+    name: WSLService
+  register: wslservice_service_info
+
+- name: Set WSLv2
+  ansible.windows.win_command: wsl --set-default-version 2
+
+- name: Copy WSLv2 Update
+  copy: 
+    src: files/wsl_update_x64.msi
+    dest: c:\install\wsl_update_x64.msi
+
+- name: Install WSLv2 Update
+  ansible.windows.win_command: msiexec.exe /i c:\install\wsl_update_x64.msi /qn
+
+- name: Install Ubuntu
+  ansible.windows.win_command: wsl --install -d Ubuntu -n
+
+- name: Reenable UAC
+  ansible.windows.win_regedit:
+    path: HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System
+    name: EnableLUA
+    data: 1
+
+- name: Restart
+  ansible.windows.win_reboot:

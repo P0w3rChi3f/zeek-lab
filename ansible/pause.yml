@@ -1,0 +1,8 @@
+---
+- hosts: localhost
+  name: Pause
+  tasks:
+
+    - name: Pause for a 3 minutes to let sysprep finish
+      ansible.builtin.pause:
+        minutes: 3

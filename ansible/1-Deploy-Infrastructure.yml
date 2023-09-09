@@ -1,0 +1,16 @@
+---
+- hosts: localhost
+  name: Deploy Lab
+  tasks:
+
+    - name: Deploy Lab Infrastructure
+      community.general.terraform:
+        project_path: '../terraform'
+        complex_vars: true
+        force_init: true
+        state: present
+      register: stdout
+
+#    - name: Pause for a minute to let DCs finish running sysprep
+#      ansible.builtin.pause:
+#        minutes: 3

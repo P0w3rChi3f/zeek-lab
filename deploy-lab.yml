@@ -1,0 +1,61 @@
+---
+- hosts: localhost
+  name: Deploy Lab
+  tasks:
+
+- name: Deploy Lab Infrastructure
+  import_playbook: ansible/1-Deploy-Infrastructure.yml
+
+- name: Pause for a 3 minutes to let sysprep finish
+  import_playbook: ansible/pause.yml
+
+- name: Deploy Website
+  hosts: Web
+  become: true
+  roles:
+    - linux-update
+    - python
+    - flask-web
+
+- name: Configure Windows Forest DC
+  hosts: 192.168.1.10
+  roles:
+    - forest-dc
+
+- name: Configure Windows Clients
+  hosts: wks
+  roles: 
+    - domain-member
+    - common-win
+    - wsl
+
+#- name: Install Zeek from Binary
+#  hosts: Wks-04
+#  roles: 
+#    - zeek
+
+- name: Install Zeek as Docker
+  hosts: 192.168.1.23
+  roles:
+    - wsl
+    - docker
+    - zeek-docker
+
+#- name: 4 Create User and Computer Objects
+#  import_playbook: ansible/4-Create-DomainUsers.yml
+#
+#- name: 5 Join WKS to Domains
+#  import_playbook: ansible/5-Join-Domain.yml
+#
+#- name: 6 Deploy Velociraptor
+#  import_playbook: ansible/Deploy-Velociraptor.yml
+#
+#- name: 7 Deploy Elastic
+#  import_playbook: ansible/Deploy-ElasticDefend.yml
+#
+# - name: Install Client Apps
+#   import_playbook: ansible/Install_ClientApps.yml
+#
+# - name: Deploy Ghost NPC
+#   import_playbook: ansible/Deploy-Ghost.yml
+#

@@ -1,0 +1,13 @@
+---
+#https://github.com/mmumshad/simple-webapp
+
+ansible_user: admin
+ansible_password: PassWord12#$34
+ansible_connection: ssh
+ansible_become_password: PassWord12#$34
+
+
+# DB variables
+db_name: employee_db
+db_user: db_user
+db_user_pass: Passw0rd

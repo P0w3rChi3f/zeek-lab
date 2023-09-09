@@ -1,0 +1,11 @@
+---
+- hosts: localhost
+  name: Destroy Lab
+  gather_facts: false
+  tasks:
+    - name: Destroy DC Infrastructure
+      community.general.terraform:
+        project_path: './terraform'
+        force_init: true
+        plan_file: "./terraform"
+        state: absent
