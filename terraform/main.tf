@@ -16,12 +16,12 @@ provider "proxmox" {
 }
 
 resource "proxmox_vm_qemu" "Servers" {
-  count = 6
+  count = 2
   name = "${var.Server_Names[count.index]}"
   target_node = "pve"
   clone = "${var.Server_Templates[count.index]}"
   full_clone = false
-  bootdisk = "${var.Server_Disks[count.index]}"
+  bootdisk = "sata0"
   bios = "${var.Server_BIOS[count.index]}"
   oncreate = true
   memory = 4096
@@ -32,17 +32,17 @@ resource "proxmox_vm_qemu" "Servers" {
   network {
       macaddr = "${var.Server_MAC[count.index]}"
       model = "${var.Server_NIC_Model[count.index]}"
-      bridge = "${var.ProxMox_Bridge_Assignments[count.index]}"
+      bridge = "vmbr1"
       firewall = "false"
       tag = "${var.Server_Vlan[count.index]}"
   } 
 }
 
 resource "proxmox_vm_qemu" "Clients" {
-  count = 4
+  count = 6
   name = "${var.User_WKS_Names[count.index]}"
   target_node = "pve"
-  clone = "Win11-LinkedClone"
+  clone = "Research-Temp"
   full_clone = false
   bootdisk = "sata0"
   bios = "ovmf"
@@ -61,22 +61,3 @@ resource "proxmox_vm_qemu" "Clients" {
   }
 }
 
-#resource "proxmox_vm_qemu" "SO" {
-#  name = "so-sensor02"
-#  target_node = "pve"
-#  iso = "securityonion-2.3.190-20221207.iso"
-#  bootdisk = "scsi0"
-#  bios = "seabios"
-#  oncreate = true
-#  memory = 4096
-#  sockets = 4
-#  boot = "cdn"
-#  #agent = 1
-#  force_create = true
-#  network {
-#      model     = "virtio"
-#      bridge = "vmbr3"
-#      firewall = "false"
-#      tag       = "192"
-#  }
-#}
