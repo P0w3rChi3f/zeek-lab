@@ -2,7 +2,7 @@
 variable "Server_Names" {
     description = "Server names for the supporting servers"
     type = list(string)
-    default = ["Research-DC","Attacker"]
+    default = ["Vega-System","Mega-Maid"]
 
 }
 
@@ -51,6 +51,6 @@ variable "User_WKS_MAC" {
 variable "User_WKS_Names" {
     description = "MAC addresses for the user windows workstations "
     type = list(string)
-    default = ["Research-Wks01","Research-Wks02","Research-Wks03","Research-Wks04","Research-Wks05","Research-Wks06"]
+    default = ["Planet-Apes","Planet-Spaceball","Planet-Unitopia","Planet-Druidia","Planet-Daj","Planet-Eantra"]
 
 }
