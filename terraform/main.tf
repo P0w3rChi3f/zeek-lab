@@ -8,7 +8,7 @@ terraform {
 }
 
 provider "proxmox" {
-    pm_api_url = "https://homelab.jameshoneycutt.net//api2/json"
+    pm_api_url = "https://homelab.jameshoneycutt.net/api2/json"
     pm_api_token_id = "terraform-prov@pve!TerraformProvisioning"
     pm_api_token_secret = "7df19234-6fab-4e2c-aed2-bbfd755e7346"
 
