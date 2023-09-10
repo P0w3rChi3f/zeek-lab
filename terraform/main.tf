@@ -8,15 +8,18 @@ terraform {
 }
 
 provider "proxmox" {
-    pm_api_url = "https://pve.honeycutthomenet.local:8006/api2/json"
+    pm_api_url = "https://mobile-lab.jameshoneycutt.net:8006/api2/json"
     pm_api_token_id = "terraform-prov@pve!TerraformProvisioning"
-    pm_api_token_secret = "7df19234-6fab-4e2c-aed2-bbfd755e7346"
+    pm_api_token_secret = "0c37d884-6106-41c4-a625-b02af7f85498"
 
     pm_tls_insecure = true
 }
 
+# terraform-prov@pve!TerraformProvisioning
+# 0c37d884-6106-41c4-a625-b02af7f85498
+
 resource "proxmox_vm_qemu" "Servers" {
-  count = 2
+  count = 1
   name = "${var.Server_Names[count.index]}"
   target_node = "pve"
   clone = "${var.Server_Templates[count.index]}"

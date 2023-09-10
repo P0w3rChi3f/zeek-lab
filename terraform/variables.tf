@@ -51,6 +51,6 @@ variable "User_WKS_MAC" {
 variable "User_WKS_Names" {
     description = "MAC addresses for the user windows workstations "
     type = list(string)
-    default = ["Research-Wks01","Research-Wks02","Research-Wks03","Research-Wks04"]
+    default = ["Research-Wks01","Research-Wks02","Research-Wks03","Research-Wks04","Research-Wks05","Research-Wks06"]
 
 }
