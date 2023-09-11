@@ -1,0 +1,8 @@
+---
+- hosts: 192.168.1.24
+  name: Get facts of an OS
+  tasks:
+
+    - name: Getting the facts
+      ansible.builtin.debug:
+        var: ansible_facts
