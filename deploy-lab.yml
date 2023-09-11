@@ -1,6 +1,8 @@
 ---
 - hosts: localhost
   name: Deploy Lab
+  vars_files:  
+    - ./ansible/group_vars/users.yml
   tasks:
 
 - name: Deploy Lab Infrastructure
@@ -13,11 +15,12 @@
   hosts: 192.168.1.10
   roles:
     - forest-dc
+    - ad_users
 
 - name: Configure Windows Clients
   hosts: wks
   roles: 
     - domain-member
     - common-win
-    - wsl
+    
 
