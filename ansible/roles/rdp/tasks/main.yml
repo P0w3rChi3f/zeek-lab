@@ -1,0 +1,30 @@
+---
+- name: Check RDP Registry key
+  ansible.windows.win_reg_stat:
+    path: HKLM:\System\CurrentControlSet\Control\Terminal Server
+    name: fDenyTSConnections
+  register: KeyStatus
+
+- name: Set RDP Registry key
+  ansible.windows.win_regedit:
+    path: HKLM:\System\CurrentControlSet\Control\Terminal Server
+    name: fDenyTSConnections
+    data: 0
+  when: KeyStatus.value != "0"
+
+- name: Enable RDP through the firewall
+  ansible.windows.win_powershell: 
+    script: | 
+  
+      $RDP_Rules = Get-NetFirewallRule -DisplayGroup "Remote Desktop"
+      if ($RDP_Rules.Enabled -eq "False") {Enable-NetFirewallRule -DisplayGroup $RDP_Rules.DisplayGroup}
+
+
+#- name: Check the Vars
+#  ansible.builtin.debug:
+#    var: ansible_facts
+
+#- name: Set Registry Entry
+#  ansible.windows.win_shell: 'Set-ItemProperty -Path "HKLM:\System\CurrentControlSet\Control\Terminal Server" -name "fDenyTSConnections" -value 0'
+#
+#
