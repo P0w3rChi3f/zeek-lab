@@ -5,8 +5,8 @@ users:
     title: CPT
     department: Hero
     job_role: Captain
-    email: ""
-    phone#: 559-173-7664
+    #email: ""
+    phoneNum: 559-173-7664
     employeeID: "467"
     password: t$TeWvkT8!
   - first_name: Princess
@@ -15,18 +15,18 @@ users:
     title: Prncss
     department: Hero
     job_role: Princess
-    email: ""
-    phone#: 253-557-5206
+    #email: ""
+    phoneNum: 253-557-5206
     employeeID: "101"
     password: QtyPIhD2&
   - first_name: Barf
-    last_name: ""
+    last_name: Mawg
     username: barf
     title: Mr
     department: Hero
     job_role: Sidekick
-    email: ""
-    phone#: 997-176-0198
+    #email: ""
+    phoneNum: 997-176-0198
     employeeID: "701"
     password: H4lfsN0*
   - first_name: Dot
@@ -35,8 +35,8 @@ users:
     title: Mrs
     department: Hero
     job_role: Handmaiden
-    email: ""
-    phone#: 901-269-8039
+    #email: ""
+    phoneNum: 901-269-8039
     employeeID: "298"
     password: x@EdS1&
   - first_name: Dark
@@ -45,8 +45,8 @@ users:
     title: LD
     department: Spaceballs
     job_role: Lord
-    email: ""
-    phone#: 739-420-9997
+    #email: ""
+    phoneNum: 739-420-9997
     employeeID: "868"
     password: rTT%mNuV1&
   - first_name: 'Colonel '
@@ -55,8 +55,8 @@ users:
     title: CDR
     department: Spaceballs
     job_role: Commander
-    email: ""
-    phone#: 905-273-2992
+    #email: ""
+    phoneNum: 905-273-2992
     employeeID: "194"
     password: c@OCl%pN8*
   - first_name: President
@@ -65,8 +65,8 @@ users:
     title: Pres
     department: Spaceballs
     job_role: President
-    email: ""
-    phone#: 836-379-5439
+    #email: ""
+    phoneNum: 836-379-5439
     employeeID: "966"
     password: LZk1FhX6#
   - first_name: Commanderette
@@ -75,18 +75,18 @@ users:
     title: Mrs
     department: Spaceballs
     job_role: Commanderette
-    email: ""
-    phone#: 560-818-6179
+    #email: ""
+    phoneNum: 560-818-6179
     employeeID: "839"
     password: qRkpN3%
   - first_name: Snotty
-    last_name: ""
+    last_name: Minion
     username: snotty
     title: Mr
     department: Spaceballs
     job_role: Teleport Tech
-    email: ""
-    phone#: 215-503-0974
+    #email: ""
+    phoneNum: 215-503-0974
     employeeID: "458"
     password: JuAe#dS4%
   - first_name: Radar
@@ -95,8 +95,8 @@ users:
     title: Mr
     department: Spaceballs
     job_role: Radar Technician
-    email: ""
-    phone#: 975-556-1175
+    #email: ""
+    phoneNum: 975-556-1175
     employeeID: "581"
     password: bPt@rD4%
   - first_name: Philip
@@ -105,8 +105,8 @@ users:
     title: Mr
     department: Spaceballs
     job_role: Gunner
-    email: ""
-    phone#: 200-547-3387
+    #email: ""
+    phoneNum: 200-547-3387
     employeeID: "224"
     password: B8l&yaD6%
   - first_name: Major
@@ -115,18 +115,18 @@ users:
     title: MAJ
     department: Spaceballs
     job_role: Deputy Commander
-    email: ""
-    phone#: 889-254-6830
+    #email: ""
+    phoneNum: 889-254-6830
     employeeID: "143"
     password: yae9uV2%
   - first_name: Yogurt
-    last_name: ""
+    last_name: Wise
     username: yogurt
     title: Master
     department: Support
     job_role: Master of the Schwartz
-    email: ""
-    phone#: 912-703-7312
+    #email: ""
+    phoneNum: 912-703-7312
     employeeID: "969"
     password: K!7oaE1$
   - first_name: King
@@ -135,8 +135,8 @@ users:
     title: King
     department: Support
     job_role: King of Druidia
-    email: ""
-    phone#: 237-663-5037
+    #email: ""
+    phoneNum: 237-663-5037
     employeeID: "623"
     password: 03Y$oU0$
   - first_name: Pizza
@@ -145,18 +145,18 @@ users:
     title: Mr
     department: Support
     job_role: Space Gangster
-    email: ""
-    phone#: 605-626-9206
+    #email: ""
+    phoneNum: 605-626-9206
     employeeID: "978"
     password: lhYxElG7&
   - first_name: Vinnie
-    last_name: ""
+    last_name: Hitman
     username: vinnie
     title: Mr
     department: Support
     job_role: Right Hand Man
-    email: ""
-    phone#: 420-318-4087
+    #email: ""
+    phoneNum: 420-318-4087
     employeeID: "990"
     password: '!yBsoG7&'
   - first_name: Prince
@@ -165,8 +165,8 @@ users:
     title: PR
     department: Support
     job_role: Prince
-    email: ""
-    phone#: 723-761-2014
+    #email: ""
+    phoneNum: 723-761-2014
     employeeID: "937"
     password: TmiwfX8*
 
