@@ -55,3 +55,13 @@
     name: "{{ root_computers_name }}"
     path: "{{ root_computers_path }}"
     state: present
+
+- name: Create User Groups
+  community.windows.win_domain_group:
+    name: "{{ item }}"
+    scope: global
+    path: OU=Spacewars-Group,OU=Spacewars,DC=Spacewars,DC=local
+  with_items:
+    - Hero
+    - Spaceballs
+    - Support
