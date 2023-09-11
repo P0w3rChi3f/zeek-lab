@@ -17,3 +17,6 @@ Apes
 Druidia
 Spaceball
 Unitopia
+
+## Possible Efficancy Changes
+Move Domain Vars to Group_Vars
