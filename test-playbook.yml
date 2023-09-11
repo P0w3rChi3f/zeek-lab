@@ -1,0 +1,25 @@
+---
+- name: Configure Elk
+  vars_files:  
+    - ./ansible/group_vars/users.yml
+  hosts:  DC #192.168.1.14 #172.16.1.50 wks
+#  become: true
+#  become_method: runas
+#  become_user: .\Admin
+
+  roles: 
+    #- linux-update
+    #- docker
+    #- elk
+    #- zeek-compiled-prereqs
+    #- zeek-compiled-devset
+    #- havoc
+    #- merlin
+    #- wsl
+    #- docker
+    - ad_users
+
+
+    
+
+    
