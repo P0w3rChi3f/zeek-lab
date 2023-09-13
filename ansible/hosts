@@ -11,16 +11,16 @@
 # Ex 1: Ungrouped hosts, specify before any group headers:
 
 [windows]
-192.168.1.10 host_name=Vega-System
-192.168.1.21 host_name=Planet-Apes
-192.168.1.22 host_name=Planet-Spaceball
-192.168.1.23 host_name=Planet-Unitopia
-192.168.1.24 host_name=Planet-Druidia
-192.168.1.25 host_name=Planet-Daj
-192.168.1.26 host_name=Planet-Eantra
+192.168.1.10 host_name=Research-DC01
+192.168.1.21 host_name=Research-Wks01
+192.168.1.22 host_name=Research-Wks02
+192.168.1.23 host_name=Research-Wks03
+192.168.1.24 host_name=Research-Wks04
+192.168.1.25 host_name=Research-Wks05
+192.168.1.26 host_name=Research-Wks06
 
 [linux]
-172.16.1.50 host_name=Mega-Maid
+172.16.1.50 host_name=Research-Attacker
 
 [DC]
 192.168.1.10

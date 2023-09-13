@@ -1,0 +1,1 @@
+import-csv .\ResearchUsers.csv | ConvertTo-Yaml | Out-File users.yml

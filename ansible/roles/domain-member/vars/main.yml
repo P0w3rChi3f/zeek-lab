@@ -1,5 +1,5 @@
 ---
 domain_admin: Administrator
 admin_pass: PassWord12#$34
-domain_name: spacewars.local
-path: "ou=spacewars-computers,ou=Spacewars,dc=Spacewars,dc=local"
+domain_name: research.local
+path: "ou=research-computers,ou=research,dc=research,dc=local"

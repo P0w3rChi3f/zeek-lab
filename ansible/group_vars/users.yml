@@ -1,172 +1,172 @@
-users:
-  - first_name: Lone
-    last_name: Starr
-    username: lstarr
-    title: CPT
-    department: Hero
-    job_role: Captain
-    #email: ""
+users:  
+  - first_name: Sergent
+    last_name: Scutchings
+    username: sscutchings0
+    title: Mr
+    department: IT
+    job_role: IT Admin
+    email: sscutchings0@research.local
     phoneNum: 559-173-7664
     employeeID: "467"
-    password: t$TeWvkT8!
-  - first_name: Princess
-    last_name: Vespa
-    username: pvspa
-    title: Prncss
-    department: Hero
-    job_role: Princess
-    #email: ""
+    password: $Jc!@LA87
+  - first_name: Beck
+    last_name: Biasio
+    username: bbiasio1
+    title: Mrs
+    department: Business Development
+    job_role: Manager
+    email: bbiasio1@research.local
     phoneNum: 253-557-5206
     employeeID: "101"
-    password: QtyPIhD2&
-  - first_name: Barf
-    last_name: Mawg
-    username: barf
-    title: Mr
-    department: Hero
-    job_role: Sidekick
-    #email: ""
+    password: $JoSh$1213
+  - first_name: Emeline
+    last_name: D'Agostini
+    username: edagostini2
+    title: Mrs
+    department: Business Development
+    job_role: Assistant
+    email: edagostini2@research.local
     phoneNum: 997-176-0198
     employeeID: "701"
-    password: H4lfsN0*
-  - first_name: Dot
-    last_name: Matrix
-    username: dmatrix
+    password: $KVL,@psk@KAHJ@
+  - first_name: Lira
+    last_name: Moar
+    username: lmoar3
     title: Mrs
-    department: Hero
-    job_role: Handmaiden
-    #email: ""
+    department: IT
+    job_role: IT Admin
+    email: lmoar3@research.local
     phoneNum: 901-269-8039
     employeeID: "298"
-    password: x@EdS1&
-  - first_name: Dark
-    last_name: Helmet
-    username: dhelmet
-    title: LD
-    department: Spaceballs
-    job_role: Lord
-    #email: ""
+    password: $KaTiTa$8888
+  - first_name: Dorris
+    last_name: Warbrick
+    username: dwarbrick4
+    title: Mr
+    department: Product Management
+    job_role: Manager
+    email: dwarbrick4@research.local
     phoneNum: 739-420-9997
     employeeID: "868"
-    password: rTT%mNuV1&
-  - first_name: 'Colonel '
-    last_name: Sandurz�
-    username: csandurz
-    title: CDR
-    department: Spaceballs
-    job_role: Commander
-    #email: ""
+    password: $L0v3r2B33$
+  - first_name: Dotty
+    last_name: Tremmil
+    username: dtremmil5
+    title: Ms
+    department: Sales
+    job_role: Lead
+    email: dtremmil5@research.local
     phoneNum: 905-273-2992
     employeeID: "194"
     password: c@OCl%pN8*
-  - first_name: President
-    last_name: Skroob
-    username: pskroob
-    title: Pres
-    department: Spaceballs
-    job_role: President
-    #email: ""
+  - first_name: Valene
+    last_name: Landor
+    username: vlandor6
+    title: Mrs
+    department: Business Development
+    job_role: Analysis
+    email: vlandor6@research.local
     phoneNum: 836-379-5439
     employeeID: "966"
-    password: LZk1FhX6#
-  - first_name: Commanderette
-    last_name: Zircon�
-    username: czircon
-    title: Mrs
-    department: Spaceballs
-    job_role: Commanderette
-    #email: ""
+    password: $LanaKada$
+  - first_name: Gerick
+    last_name: Schole
+    username: gschole7
+    title: Mr
+    department: Marketing
+    job_role: Manager
+    email: gschole7@research.local
     phoneNum: 560-818-6179
     employeeID: "839"
-    password: qRkpN3%
-  - first_name: Snotty
-    last_name: Minion
-    username: snotty
-    title: Mr
-    department: Spaceballs
-    job_role: Teleport Tech
-    #email: ""
+    password: $LilTink$
+  - first_name: Caleb
+    last_name: Guiett
+    username: cguiett8
+    title: Ms
+    department: Human Resources
+    job_role: Admin
+    email: cguiett8@research.local
     phoneNum: 215-503-0974
     employeeID: "458"
-    password: JuAe#dS4%
-  - first_name: Radar
-    last_name: Technician
-    username: rtechnician
-    title: Mr
-    department: Spaceballs
-    job_role: Radar Technician
-    #email: ""
+    password: $LimeZXR!
+  - first_name: Leonelle
+    last_name: Larter
+    username: llarter9
+    title: Mrs
+    department: Research Development
+    job_role: Manager
+    email: llarter9@research.local
     phoneNum: 975-556-1175
     employeeID: "581"
-    password: bPt@rD4%
-  - first_name: Philip
-    last_name: Asshole
-    username: passhole
-    title: Mr
-    department: Spaceballs
-    job_role: Gunner
-    #email: ""
+    password: $LoveBugs$
+  - first_name: Alonzo
+    last_name: Carreyette
+    username: acarreyettea
+    title: Ms
+    department: Human Resources
+    job_role: Manager
+    email: acarreyettea@research.local
     phoneNum: 200-547-3387
     employeeID: "224"
     password: B8l&yaD6%
-  - first_name: Major
-    last_name: Asshole
-    username: masshole
-    title: MAJ
-    department: Spaceballs
-    job_role: Deputy Commander
-    #email: ""
+  - first_name: Dominic
+    last_name: Naerup
+    username: dnaerupb
+    title: Mrs
+    department: Product Management
+    job_role: Associate
+    email: dnaerupb@research.local
     phoneNum: 889-254-6830
     employeeID: "143"
-    password: yae9uV2%
-  - first_name: Yogurt
-    last_name: Wise
-    username: yogurt
-    title: Master
-    department: Support
-    job_role: Master of the Schwartz
-    #email: ""
+    password: $8AgOsTO1936$
+  - first_name: Crystal
+    last_name: Durman
+    username: cdurmanc
+    title: Mrs
+    department: IT
+    job_role: Helpdesk
+    email: cdurmanc@research.local
     phoneNum: 912-703-7312
     employeeID: "969"
-    password: K!7oaE1$
-  - first_name: King
-    last_name: Roland
-    username: kroland
-    title: King
-    department: Support
-    job_role: King of Druidia
-    #email: ""
+    password: $2doughNUTS$
+  - first_name: Filberte
+    last_name: Myderscough
+    username: fmyderscoughd
+    title: Mr
+    department: Human Resources
+    job_role: Admin
+    email: fmyderscoughd@research.local
     phoneNum: 237-663-5037
     employeeID: "623"
-    password: 03Y$oU0$
-  - first_name: Pizza
-    last_name: Hutt
-    username: phutt
-    title: Mr
-    department: Support
-    job_role: Space Gangster
-    #email: ""
+    password: $1Wsnt^Sure7*
+  - first_name: Darell
+    last_name: Micka
+    username: dmickae
+    title: Mrs
+    department: Product Management
+    job_role: Associate
+    email: dmickae@research.local
     phoneNum: 605-626-9206
     employeeID: "978"
-    password: lhYxElG7&
-  - first_name: Vinnie
-    last_name: Hitman
-    username: vinnie
-    title: Mr
-    department: Support
-    job_role: Right Hand Man
-    #email: ""
+    password: $1NotSafe1$
+  - first_name: Dotty
+    last_name: Goburn
+    username: dgoburnf
+    title: Mrs
+    department: Product Management
+    job_role: Associate
+    email: dgoburnf@research.local
     phoneNum: 420-318-4087
     employeeID: "990"
-    password: '!yBsoG7&'
-  - first_name: Prince
-    last_name: Valium
-    username: pvalium
-    title: PR
-    department: Support
-    job_role: Prince
-    #email: ""
+    password: $1MyluvlyMydear$
+  - first_name: Angela
+    last_name: Juhruke
+    username: ajuhrukeg
+    title: Mrs
+    department: Research Development
+    job_role: Analysis
+    email: ajuhrukeg@research.local
     phoneNum: 723-761-2014
     employeeID: "937"
-    password: TmiwfX8*
+    password: $1HouseWife1$
 

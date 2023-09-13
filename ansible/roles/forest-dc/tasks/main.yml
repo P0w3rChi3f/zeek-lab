@@ -60,8 +60,12 @@
   community.windows.win_domain_group:
     name: "{{ item }}"
     scope: global
-    path: OU=Spacewars-Group,OU=Spacewars,DC=Spacewars,DC=local
+    path: OU=Research-Group,OU=Research,DC=Research,DC=local
   with_items:
-    - Hero
-    - Spaceballs
-    - Support
+    - "Business Development"
+    - "Human Resources"
+    - IT
+    - Marketing
+    - "Product Management"
+    - "Research Development"
+    - Sales

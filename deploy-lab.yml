@@ -1,8 +1,6 @@
 ---
 - hosts: localhost
   name: Deploy Lab
-  vars_files:  
-    - ./ansible/group_vars/users.yml
   tasks:
 
 - name: Deploy Lab Infrastructure
@@ -13,6 +11,8 @@
 
 - name: Configure Windows Forest DC
   hosts: 192.168.1.10
+  vars_files:  
+  - ./ansible/group_vars/users.yml
   roles:
     - forest-dc
     - ad_users
@@ -22,5 +22,6 @@
   roles: 
     - domain-member
     - common-win
+    - rdp
     
 

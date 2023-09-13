@@ -2,15 +2,16 @@
 - name: Create Test Users
   community.windows.win_domain_user:
     name: "{{ item.username }}"
-    domain_server: spacewars.local
-    domain_username: spacewars\Administrator
+    domain_server: research.local
+    domain_username: research\Administrator
     domain_password: PassWord12#$34
     enabled: true
     firstname: "{{ item.first_name }}"
     surname: "{{ item.last_name }}"
+    email: "{{ item.email }}"
     password: "{{ item.password }}"
     password_never_expires: true
-    path: ou=spacewars-users,ou=Spacewars,dc=Spacewars,dc=local
+    path: ou=research-users,ou=research,dc=research,dc=local
     sam_account_name: "{{ item.username }}"
     groups: "{{ item.department }}"
     attributes:
@@ -24,7 +25,7 @@
   with_items: "{{ users }}"
 
 - name: Add Heros to Domain Admins
-  ansible.windows.win_shell: Add-ADGroupMember -Identity "Domain Admins" -Members Hero
+  ansible.windows.win_shell: Add-ADGroupMember -Identity "Domain Admins" -Members IT
 
 
     

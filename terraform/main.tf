@@ -19,7 +19,7 @@ provider "proxmox" {
 # 0c37d884-6106-41c4-a625-b02af7f85498
 
 resource "proxmox_vm_qemu" "Servers" {
-  count = 1
+  count = 2
   name = "${var.Server_Names[count.index]}"
   target_node = "pve"
   clone = "${var.Server_Templates[count.index]}"
