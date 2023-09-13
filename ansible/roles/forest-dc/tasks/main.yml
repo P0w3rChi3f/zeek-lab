@@ -60,7 +60,7 @@
   community.windows.win_domain_group:
     name: "{{ item }}"
     scope: global
-    path: OU=Research-Group,OU=Research,DC=Research,DC=local
+    path: "{{ groups_path }}"
   with_items:
     - "Business Development"
     - "Human Resources"

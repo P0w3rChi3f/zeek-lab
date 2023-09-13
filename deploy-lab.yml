@@ -13,12 +13,16 @@
   hosts: 192.168.1.10
   vars_files:  
   - ./ansible/group_vars/users.yml
+  - ./ansible/group_vars/domain.yml
   roles:
     - forest-dc
     - ad_users
 
 - name: Configure Windows Clients
   hosts: wks
+  vars_files:  
+  - ./ansible/group_vars/users.yml
+  - ./ansible/group_vars/domain.yml
   roles: 
     - domain-member
     - common-win

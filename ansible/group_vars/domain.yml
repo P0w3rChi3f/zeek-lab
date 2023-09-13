@@ -1,0 +1,21 @@
+---
+# vars file for forest-dc
+domain_admin: Administrator
+admin_pass: PassWord12#$34
+domain_name: researcheslab.com
+netbios: research
+mode: Win2012R2
+
+#vars for AD Structure
+root_ou: research
+root_users_name: Research-Users
+root_users_path: "ou=research,dc=researcheslab,dc=com"
+root_groups_name: Research-Group
+root_groups_path: "ou=research,dc=researcheslab,dc=com"
+root_computers_name: Research-Computers
+root_computers_path: "ou=research,dc=researcheslab,dc=com"
+
+#vars for Path
+computer_path: "ou=research-computers,ou=research,dc=researcheslab,dc=com"
+users_path: "ou=research-users,ou=research,dc=researcheslab,dc=com"
+groups_path: "ou=Research-Group,ou=Research,dc=researcheslab,dc=com"

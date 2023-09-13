@@ -13,7 +13,7 @@
     dns_domain_name: "{{ domain_name }}"
     domain_admin_user: "{{ domain_admin}}@{{ domain_name }}"
     domain_admin_password: "{{ admin_pass }}"
-    domain_ou_path: "{{ path }}"
+    domain_ou_path: "{{ computer_path }}"
     state: domain
   register: domain_state
 
