@@ -69,3 +69,6 @@
     - "Product Management"
     - "Research Development"
     - Sales
+
+- name: Set DNS forwarder
+  ansible.windows.win_shell: Set-DnsServerForwarder -IPAddress 10.5.1.7

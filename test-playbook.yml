@@ -2,13 +2,14 @@
 - name: Testing Playbooks
   vars_files:  
     - ./ansible/group_vars/users.yml
-  hosts:  192.168.1.21 #172.16.1.50 wks
-#  become: true
-#  become_method: runas
-#  become_user: .\Admin
+    - ./ansible/group_vars/domain.yml
+  hosts:  192.168.1.10 #172.16.1.50 wks
+  #become: true
+  #become_method: runas
+  #become_user: .\Admin
 
   roles: 
-    - rdp
+    - forest-dc
 
 
     

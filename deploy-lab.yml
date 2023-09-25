@@ -28,4 +28,7 @@
     - common-win
     - rdp
     
-
+- name: Configure WKS05
+  hosts: 192.168.1.25
+  roles:
+    - defend
