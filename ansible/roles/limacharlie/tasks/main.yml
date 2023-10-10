@@ -1,0 +1,10 @@
+---
+- name: Copy Onboarding Package
+  copy:
+    src: files/hcp_win_x64_release_4.28.2.msi
+    dest: c:\install\hcp_win_x64_release_4.28.2.msi
+
+- name: Agent Downloader
+  copy:
+    src: files/insaller-cmd.ps1
+    dest: c:\install\insaller-cmd.ps1

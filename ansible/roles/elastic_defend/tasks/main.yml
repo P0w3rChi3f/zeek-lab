@@ -1,0 +1,14 @@
+---
+- name: Copy enrollment key
+  copy:
+    src: files/enrollment.txt
+    dest: c:\install\enrollment.txt
+
+#- name: Install Elastic Defend
+#  ansible.windows.win_powershell: 
+#    script: | 
+#      $ProgressPreference = 'SilentlyContinue'
+#Invoke-WebRequest -Uri https://artifacts.elastic.co/downloads/beats/elastic-agent/elastic-agent-8.10.2-windows-x86_64.zip -OutFile elastic-agent-8.10.2-windows-x86_64.zip
+#Expand-Archive .\elastic-agent-8.10.2-windows-x86_64.zip -DestinationPath .
+#cd elastic-agent-8.10.2-windows-x86_64
+#.\elastic-agent.exe install --url=https://f373b833891a446093ac2c831e4d3ea3.fleet.us-central1.gcp.cloud.es.io:443 --enrollment-token=LVVHS0Zvc0JHd0lLc204cTFMRjg6YWFYSlc1X0dRSk9GTlJQLVJjcWxVZw==

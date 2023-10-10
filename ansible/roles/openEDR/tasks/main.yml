@@ -1,0 +1,14 @@
+---
+- name: Copy Onboarding Package
+  copy:
+    src: files/openEDR_agent_installer.msi
+    dest: c:\install\openEDR_agent_installer.msi
+
+- name: Agent Downloader
+  copy:
+    src: files/agent_downloader.ps1
+    dest: c:\install\agent_downloader.ps1
+#- name: Commodo Enrollment
+#  ansible.windows.win_powershell: 
+#    script: | 
+#      Invoke-WebRequest -Uri https://honeycuttjameslivecom.itsm-us1.comodo.com:443/enroll/device/by/token/58020125b3b466ac8abb37e8056133a3 -OutFile comodo_agent

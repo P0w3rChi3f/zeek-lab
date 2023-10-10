@@ -1,0 +1,10 @@
+---
+- name: Copy Onboarding Package
+  copy:
+    src: files/WindowsDefenderATPOnboardingPackage.zip
+    dest: c:\install\WindowsDefenderATPOnboardingPackage.zip
+
+- name: Copy Detection Test
+  copy:
+    src: files/detection_test.ps1
+    dest: c:\install\detection_test.ps1

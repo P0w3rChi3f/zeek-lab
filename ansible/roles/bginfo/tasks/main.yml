@@ -1,0 +1,5 @@
+---
+- name: Copy BGInfo
+  copy:
+    src: files/BGInfo
+    dest: c:\install\BGinfo\

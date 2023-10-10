@@ -3,13 +3,17 @@
   vars_files:  
     - ./ansible/group_vars/users.yml
     - ./ansible/group_vars/domain.yml
-  hosts:  192.168.1.10 #172.16.1.50 wks
+  hosts: 192.168.1.22 #wks
   #become: true
   #become_method: runas
   #become_user: .\Admin
 
   roles: 
-    - forest-dc
+    #- bginfo
+    #- elastic_defend
+    #- defender
+    #- openEDR
+    - limacharlie
 
 
     
