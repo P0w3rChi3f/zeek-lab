@@ -1,10 +1,13 @@
 ---
 - name: Copy Onboarding Package
   copy:
-    src: files/hcp_win_x64_release_4.28.2.msi
-    dest: c:\install\hcp_win_x64_release_4.28.2.msi
+    src: files/lc_sensor.exe
+    dest: c:\install\lc_sensor.exe
 
-- name: Agent Downloader
-  copy:
-    src: files/insaller-cmd.ps1
-    dest: c:\install\insaller-cmd.ps1
+#- name: Copy Install sc
+#  copy:
+#    src: files/insaller-cmd.ps1
+#    dest: c:\install\insaller-cmd.ps1
+
+- name: Install Agent
+  ansible.windows.win_shell: c:\install\lc_sensor.exe -i AAAABgAAAQsFAAAAIzkxNTc3OThjNTBhZjM3MmMubGMubGltYWNoYXJsaWUuaW8AAAABEAIBuwAAAQwFAAAAIzkxNTc3OThjNTBhZjM3MmMubGMubGltYWNoYXJsaWUuaW8AAAABEQIBuwAAAAiBAAAABQAAAAUHAAAAEN+ZHf/0W0+Eg63YgpN/zEUAAAAJBwAAABAtpATmOhdLAIzjFee2656XAAAABAcAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAcDAAAAAAAAAAYDAAAAAAAAAQ4HAAABJjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAL2SpxyNrur8WPuRUzJqn8rXqc1hMD/E2sy4lWZrafMcD0BIpxHEDWRj0NvNkUTa55RPAws5CPEiOiVrxfHYjrpXWxF8kzjZMFJZn/kWDFIqWEol9EwBKJZBOBe1D/MqSBOkHrfGe0+AbCpAERDpsZFzlPfMpyAijnyyNDxIgBYle/aDQmmitf4w1Tx3w46q/ND/XR24EJL/1zqwwG61GUCoL3VV/DToqWYXCY7Swdt8f1hicr8QgSVVeJ8o4/qTVKP9S40QuZe0fpiEEOW0eDUnpIg3uMUHp2QDulwXjKh6HuD7i8DUkXX37hzcJdMEsdcg+ZBo8Zwzo70tDDvDvW8CAwEAAQ==

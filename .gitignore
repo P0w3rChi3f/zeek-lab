@@ -1,0 +1,3 @@
+ansible/roles/bginfo/files/bginfo/Bginfo.exe
+ansible/roles/bginfo/files/bginfo/config.bgi
+ansible/roles/limacharlie/files/lc_sensor.exe
