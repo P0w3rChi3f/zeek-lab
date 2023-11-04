@@ -1,3 +1,15 @@
 ansible/roles/bginfo/files/bginfo/Bginfo.exe
 ansible/roles/bginfo/files/bginfo/config.bgi
 ansible/roles/limacharlie/files/lc_sensor.exe
+ansible/roles/defender/files/WindowsDefenderATPOnboardingPackage.zip
+ansible/roles/elastic_defend/files/enrollment.txt
+ansible/roles/limacharlie/files/hcp_win_x64_release_4.28.2.msi
+terraform/.terraform.lock.hcl
+terraform/terraform.tfstate
+terraform/terraform.tfstate.backup
+terraform/.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.11/linux_amd64/LICENSE
+terraform/.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.11/linux_amd64/README.md
+terraform/.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.11/linux_amd64/terraform-provider-proxmox_v2.9.11
+ansible/roles/openEDR/files/openEDR_agent_installer.msi
+.gitignore
+.gitignore
